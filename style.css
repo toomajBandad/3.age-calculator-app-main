@@ -1,0 +1,202 @@
+/* widths:
+- Mobile: 375px
+- Desktop: 1440px
+
+
+## Typography
+- Font size (inputs): 32px
+
+- Family: [Poppins](https://fonts.google.com/specimen/Poppins)
+- Weights: 400i, 700, 800i */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+@font-face {
+  font-family: Poppins;
+  src: url(/assets/fonts/Poppins-Regular.ttf);
+}
+@font-face {
+  font-family: Poppins-Bold;
+  src: url(/assets/fonts/Poppins-Bold.ttf);
+}
+@font-face {
+  font-family: Poppins-BoldItalic;
+  src: url(/assets/fonts/Poppins-BoldItalic.ttf);
+}
+@font-face {
+  font-family: Poppins-ExtraBold;
+  src: url(/assets/fonts/Poppins-ExtraBold.ttf);
+}
+@font-face {
+  font-family: Poppins-ExtraBoldItalic;
+  src: url(/assets/fonts/Poppins-ExtraBoldItalic.ttf);
+}
+@font-face {
+  font-family: Poppins-Italic;
+  src: url(/assets/fonts/Poppins-Italic.ttf);
+}
+:root {
+  --Purple: hsl(259, 100%, 65%);
+  --Light-red: hsl(0, 100%, 67%);
+  --White: hsl(0, 0%, 100%);
+  --Off-white: hsl(0, 0%, 94%);
+  --Light-grey: hsl(0, 0%, 86%);
+  --Smokey-grey: hsl(0, 1%, 44%);
+  --Off-black: hsl(0, 0%, 8%);
+}
+
+.main-body {
+  font-family: Poppins;
+  height: auto;
+  font-weight: 400;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .main-body {
+    background-color: var(--Light-grey);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .ageCalc-section {
+    background-color: var(--White);
+    border-radius: 20px 20px 100px 20px;
+    width: 19rem;
+    margin-top: 5rem;
+  }
+  .calc-Container {
+    padding: 1rem;
+  }
+  .form-label {
+    font-size: small;
+    color: var(--Smokey-grey);
+  }
+  .form-control {
+    color: var(--Smokey-grey);
+    font-family: Poppins-Bold;
+  }
+  .form-text {
+    font-size: x-small;
+  }
+  .submit-btn-holder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .submit-btn {
+    width: 20% !important;
+    font-size: xx-large;
+    text-align: center;
+    background-color: var(--Purple) !important;
+    color: var(--White);
+  }
+  .submit-btn-icon {
+    width: 1.5rem;
+  }
+  .divider2,
+  .divider1 {
+    width: 40%;
+  }
+  .result-p {
+    color: var(--Purple);
+    font-family: Poppins-ExtraBoldItalic;
+    font-size: 2.5rem;
+  }
+  .strong-p {
+    font-family: Poppins-ExtraBoldItalic;
+    font-size: 2.5rem;
+    color: var(--Off-black);
+  }
+}
+
+/* medium & Large devices ( tablets and desktop, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .main-body {
+    background-color: var(--Light-grey);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .ageCalc-section {
+    background-color: var(--White);
+    border-radius: 20px 20px 150px 20px;
+    width: 50rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+  .calc-Container {
+    padding: 3rem;
+  }
+  .calc-form {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+  .form-label {
+    font-size: small;
+    color: var(--Smokey-grey);
+  }
+  .form-control {
+    font-family: Poppins-Bold;
+    font-size: x-large;
+    color: var(--Off-black);
+    padding: 0.5rem;
+  }
+  .form-control:focus {
+    border-color: var(--Purple);
+    box-shadow: none;
+  }
+  .form-control::placeholder {
+    color: rgb(163, 163, 163);
+  }
+  .form-text {
+    font-size: x-small;
+  }
+  .submit-btn-holder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .submit-btn {
+    width: 10% !important;
+    font-size: xx-large;
+    text-align: center;
+    background-color: var(--Purple) !important;
+    color: var(--White);
+  }
+  .submit-btn:hover {
+    background-color: var(--Off-black) !important;
+  }
+  .submit-btn-icon {
+    width: 2rem;
+  }
+  .divider2 {
+    width: 90%;
+  }
+  .divider1 {
+    display: none;
+  }
+  .calc-results-wrapper {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+  .result-p {
+    color: var(--Purple);
+    font-family: Poppins-ExtraBoldItalic;
+    font-size: 5rem;
+  }
+  .strong-p {
+    font-family: Poppins-ExtraBoldItalic;
+    font-size: 5rem;
+    color: var(--Off-black);
+  }
+}

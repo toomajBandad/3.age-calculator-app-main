@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link href="/bootstrap/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/style.css" />
+
+    <title>Frontend Mentor | Age calculator app</title>
+  </head>
+  <body class="main-body">
+    <section class="ageCalc-section py-4">
+      <div class="calc-Container">
+        <div class="calc-Inputs-wrapper">
+          <form
+            action="/action_page.php"
+            method="post"
+            autocomplete="on"
+            class="calc-form row"
+            onsubmit="submitForm(event)"
+          >
+            <div class="mb-3 col-4 col-md-3">
+              <label for="Day-input" class="form-label m-0 p-0" id="day-label">DAY</label>
+              <input
+                onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))"
+                type="text"
+                class="form-control"
+                id="Day-input"
+                placeholder="DD"
+              />
+              <div id="dayHelp" class="form-text m-0 p-0 text-danger d-none"
+                >Must be a valid data</div
+              >
+            </div>
+            <div class="mb-3 col-4 col-md-3">
+              <label for="Month-input" class="form-label m-0 p-0" id="month-label">MONTH</label>
+              <input
+                type="text"
+                class="form-control"
+                id="Month-input"
+                placeholder="MM"
+                onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))"
+              />
+              <div id="monthlHelp" class="form-text m-0 p-0 text-danger d-none"
+                >Must be a valid data</div
+              >
+            </div>
+            <div class="mb-3 col-4 col-md-3">
+              <label for="Year-input" class="form-label m-0 p-0" id="year-label">YEAR</label>
+              <input
+                type="text"
+                onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))"
+                class="form-control"
+                id="Year-input"
+                placeholder="YYYY"
+              />
+              <div id="yearHelp" class="form-text m-0 p-0 text-danger d-none">
+                Must be a valid data</div
+              >
+            </div>
+
+            <div class="col-12 submit-btn-holder">
+              <hr class="divider2 m-0 p-0" />
+              <button
+                type="submit"
+                class="btn submit-btn rounded-circle p-1 m-0"
+              >
+                <img
+                  src="/assets/images/icon-arrow.svg"
+                  class="img-fluid submit-btn-icon m-0 p-0"
+                />
+              </button>
+              <hr class="divider1 m-0 p-0" />
+            </div>
+          </form>
+        </div>
+
+        <div class="calc-results-wrapper container">
+          <div class="calc-result rowm-0 p-0">
+            <p class="m-0 p-0"
+              ><strong class="result-p" id="result-years">-- </strong>
+              <strong class="strong-p m-0 p-0"> years</strong></p
+            >
+          </div>
+          <div class="calc-result rowm-0 p-0">
+            <p class="m-0 p-0"
+              ><strong class="result-p" id="result-months">-- </strong>
+              <strong class="strong-p m-0 p-0"> months</strong></p
+            >
+          </div>
+          <div class="calc-result row m-0 p-0">
+            <p class="m-0 p-0"
+              ><strong class="result-p" id="result-days">-- </strong>
+              <strong class="strong-p m-0 p-0"> days</strong></p
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
